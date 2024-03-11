@@ -9,7 +9,7 @@ const SomeComponent = () => {
   const { data, isLoading, error } = useSelector(state => state.someReducer);
 
   useEffect(() => {
-      console.log("hi")
+       
     dispatch(fetchData());
   }, [ ]);
 
@@ -20,10 +20,13 @@ const SomeComponent = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+  console.log(data)
 
   return (
     <div>
-      <h5>application has been rendered</h5>
+       {Object.entries(data,(obj)=>{return <h1>{obj}</h1>})
+
+        }
     </div>
   );
 };

@@ -10,11 +10,11 @@ export const fetchData = () => {
     try {
       const options = {
         method: 'GET',
-        url: 'https://wordsapiv1.p.rapidapi.com/words/hatchback/typeOf',
-        headers: {
-          'X-RapidAPI-Key': '6544dddd3cmsh6bf420073cc8a12p10426fjsn37878b95ccf6',
-          'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-        }
+        url: 'https://api.github.com/users/saicharankalakonda',
+        // headers: {
+        //   'X-RapidAPI-Key': '6544dddd3cmsh6bf420073cc8a12p10426fjsn37878b95ccf6',
+        //   'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
+        // }
       };
       const response = await axios.request(options);
       console.log(response)
